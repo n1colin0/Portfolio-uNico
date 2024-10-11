@@ -1,0 +1,100 @@
+body {
+    background-image: url('img/background.jpg');
+    background-size: cover; /* Ajusta o background para cobrir toda a área */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: #ffffff; /* Mudando para branco para melhor contraste */
+    position: relative; /* Necessário para posicionar o pseudo-elemento corretamente */
+    min-height: 100vh; /* Garante que o body cubra toda a altura da viewport */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-image {
+    text-align: center; /* Centraliza a imagem horizontalmente */
+    margin-top: 20px; /* Espaço acima da imagem */
+    position: relative; /* Necessário para o overlay */
+    display: inline-block; /* Para que o overlay funcione corretamente */
+}
+
+.my-image img {
+    width: 150px; /* Ajuste o tamanho para telas menores */
+    height: 150px; /* Ajuste o tamanho para telas menores */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
+    border: 5px solid #FFD700; /* Adiciona uma borda ao redor da imagem */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao redor da imagem */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para transformações */
+}
+
+@media (min-width: 600px) {
+    .my-image img {
+        width: 200px; /* Aumenta o tamanho da imagem em telas maiores */
+        height: 200px;
+    }
+}
+
+.my-image img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ligeiramente ao passar o mouse */
+}
+
+/* Estilos para o overlay */
+.overlay {
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: white; /* Cor do texto */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s; /* Transição suave */
+    border-radius: 50%; /* Mantém a borda arredondada */
+}
+
+.my-image:hover .overlay {
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+.titulo {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .titulo {
+        max-width: 700px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .titulo {
+        max-width: 800px;
+        padding: 40px;
+    }
+}
+
+/* Estilos para os links sociais */
+.social-links a {
+    color: #FFD700; /* Cor dos links sociais */
+    margin: 0 20px; /* Margens dos links sociais */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 2em; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+.social-links a:hover {
+    color: #fff; /* Cor dos links ao passar o mouse */
+}
