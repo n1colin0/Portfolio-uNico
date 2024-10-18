@@ -24,8 +24,8 @@ body {
 }
 
 .my-image img {
-    width: 150px; /* Ajuste o tamanho para telas menores */
-    height: 150px; /* Ajuste o tamanho para telas menores */
+    width: 250px; /* Ajuste o tamanho para telas menores */
+    height: 250px; /* Ajuste o tamanho para telas menores */
     border-radius: 50%; /* Faz a imagem ficar redonda */
     object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
     border: 5px solid #FFD700; /* Adiciona uma borda ao redor da imagem */
