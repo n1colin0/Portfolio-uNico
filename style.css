@@ -29,19 +29,28 @@ body {
     border-radius: 50%; /* Faz a imagem ficar redonda */
     object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
     border: 5px solid #FFD700; /* Adiciona uma borda ao redor da imagem */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao redor da imagem */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para transformações */
-}
-
-@media (min-width: 600px) {
-    .my-image img {
-        width: 200px; /* Aumenta o tamanho da imagem em telas maiores */
-        height: 200px;
-    }
+    box-shadow: 0 0 15px rgba(255, 223, 0, 0.9); /* Sombra amarela mais forte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformações */
+    cursor: pointer; /* Adiciona um cursor de mão */
+    animation: pulse 1.5s infinite; /* Animação de pulsação na borda */
 }
 
 .my-image img:hover {
-    transform: scale(1.05); /* Aumenta a imagem ligeiramente ao passar o mouse */
+    transform: scale(1.08); /* Aumenta a imagem mais ao passar o mouse */
+    box-shadow: 0 0 20px rgba(255, 223, 0, 1); /* Sombra mais intensa no hover */
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 223, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 223, 0, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 223, 0, 0.7);
+    }
 }
 
 /* Estilos para o overlay */
